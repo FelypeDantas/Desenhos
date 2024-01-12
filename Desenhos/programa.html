@@ -1,0 +1,35 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+     //captura da tag canvas e armazenamento na variável tela;
+     var tela = document.querySelector("canvas");
+     var pincel = tela.getContext("2d");
+
+     // Parte deixa fundo do canvas cinza;
+     pincel.fillStyle = "LightGrey";
+     pincel.fillRect(0, 0, 600, 400);
+
+     //parte pintada de verde;
+     pincel.fillStyle = "green";
+     pincel.fillRect(0, 0, 200, 400);
+
+     //parte pintada de vermelho;
+     pincel.fillStyle = "red";
+     pincel.fillRect(400, 0, 200, 400);
+
+     //caminho para triângulo amarelo;
+     pincel.fillStyle = "yellow";
+     pincel.beginPath();
+     pincel.moveTo(300, 200);
+     pincel.lineTo(200, 400);
+     pincel.lineTo(400, 400);
+     pincel.fill();
+
+     pincel.fillStyle = "blue";
+     pincel.beginPath();
+     pincel.arc(300, 200, 50, 0, 2 * 3.14);
+     pincel.fill();
+
+
+</script>
